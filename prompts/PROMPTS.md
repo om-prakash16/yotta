@@ -1,6 +1,6 @@
 # Prompt history
 
-Tool used: Claude (claude.ai chat, Claude Sonnet 5.5), for planning, code generation, debugging and documentation.
+Tool used: LLM Coding Assistant / AI pair programmer, for planning, code generation, debugging, and documentation.
 AI responses are optional per the FAQ and are not included here.
 
 > **Completeness note:** this file only contains prompts that were visible to the assistant when it generated this

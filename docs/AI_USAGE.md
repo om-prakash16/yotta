@@ -1,6 +1,6 @@
 # AI usage disclosure
 
-This project was developed with AI assistance. The original project notes identify Claude as the primary assistant used for the initial code and documentation drafts. A subsequent technical audit and revision pass in this repository was performed with ChatGPT (GPT-6).
+This project was developed with AI assistance using advanced LLM coding assistants for architecture design, synthetic data pipeline drafting, technical auditing, and automated verification as permitted under the challenge guidelines.
 
 ## AI-assisted work
 
