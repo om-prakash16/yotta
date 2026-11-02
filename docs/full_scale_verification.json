@@ -1,0 +1,138 @@
+{
+  "generated_at_utc_date": "2026-11-02",
+  "seed": 20261022,
+  "requested_scale": {
+    "students": 5000,
+    "buses": 100,
+    "stops": 300,
+    "school_days": 200
+  },
+  "actual_scale": {
+    "students": 5000,
+    "buses": 100,
+    "stops": 300,
+    "school_days": 200
+  },
+  "clean_baseline_validation": {
+    "passed": true,
+    "total_violations": 0,
+    "by_check": {},
+    "validation_scope": "independent validation of clean, pre-injection 5,000-student baseline",
+    "seed": 20261022,
+    "elapsed_s": 9.5
+  },
+  "exported_csv_validation": {
+    "total_rule_hits": 30,
+    "unexplained_violations": 0,
+    "exact_ground_truth_match": true,
+    "per_issue_type": {
+      "bus_capacity_exceeded": {
+        "injected": 5,
+        "detected": 5,
+        "true_positive": 5,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "impossible_travel_time": {
+        "injected": 5,
+        "detected": 5,
+        "true_positive": 5,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "incompatible_route_assignment": {
+        "injected": 5,
+        "detected": 5,
+        "true_positive": 5,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "notification_invalid_contact": {
+        "injected": 5,
+        "detected": 5,
+        "true_positive": 5,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "unapproved_address_exposed": {
+        "injected": 5,
+        "detected": 5,
+        "true_positive": 5,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    }
+  },
+  "sqlite_seed_import": {
+    "passed": true,
+    "database": "fresh SQLite database import from generated SQL seed",
+    "seed_bytes": 125251212,
+    "foreign_keys_enabled_after_import": true,
+    "foreign_key_violations": 0,
+    "row_counts": {
+      "school_calendar": 200,
+      "address_zones": 40,
+      "stops": 300,
+      "buses": 100,
+      "drivers": 100,
+      "students": 5000,
+      "guardian_contacts": 6964,
+      "routes": 100,
+      "route_stops": 600,
+      "bus_capacity_changes": 20,
+      "route_disruptions": 298,
+      "assignments": 5000,
+      "assignment_events": 5156,
+      "attendance_events": 927001,
+      "notifications": 19296
+    }
+  },
+  "two_run_reproducibility": {
+    "identical_sha256": true,
+    "artefacts_compared": 35,
+    "quality_gate_passed_both_runs": true,
+    "elapsed_seconds_by_run": [
+      15.9,
+      16.6
+    ],
+    "comparison_script": "scripts/compare_reproducibility.py"
+  },
+  "automated_tests": {
+    "passed": 24,
+    "failed": 0,
+    "command": "python -m pytest -q"
+  },
+  "actual_entity_row_counts": {
+    "school_calendar": 200,
+    "address_zones": 40,
+    "stops": 300,
+    "buses": 100,
+    "drivers": 100,
+    "students": 5000,
+    "guardian_contacts": 6964,
+    "routes": 100,
+    "route_stops": 600,
+    "bus_capacity_changes": 20,
+    "route_disruptions": 298,
+    "assignments": 5000,
+    "assignment_events": 5156,
+    "attendance_events": 927001,
+    "notifications": 19296
+  },
+  "generator_elapsed_seconds": 15.9,
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  }
+}

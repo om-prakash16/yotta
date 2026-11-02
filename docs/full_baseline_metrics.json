@@ -1,0 +1,96 @@
+{
+  "volumes": {
+    "school_calendar": 200,
+    "address_zones": 40,
+    "stops": 300,
+    "buses": 100,
+    "drivers": 100,
+    "students": 5000,
+    "guardian_contacts": 6964,
+    "routes": 100,
+    "route_stops": 600,
+    "bus_capacity_changes": 15,
+    "route_disruptions": 298,
+    "assignments": 5000,
+    "assignment_events": 5156,
+    "attendance_events": 927001,
+    "notifications": 19296
+  },
+  "assignment": {
+    "students": 5000,
+    "assigned": 4781,
+    "unassigned": 219,
+    "assignment_rate": 0.9562,
+    "decision_reason_counts": {
+      "assigned_best_score": 4781,
+      "no_stop_within_walking_distance": 99,
+      "outside_service_area": 75,
+      "pickup_window_conflict": 43,
+      "capacity_full": 2
+    },
+    "median_walk_km": 0.279,
+    "max_walk_km": 1.193,
+    "coverage_by_accessibility_need": {
+      "no_wheelchair_requirement": 0.9561,
+      "wheelchair_required": 0.9615
+    },
+    "accessibility_assignment_gap_percentage_points": -0.54,
+    "coverage_by_grade_band": {
+      "K-5": 0.9299,
+      "6-8": 0.98,
+      "9-12": 0.9793
+    },
+    "coverage_by_zone_type": {
+      "rural": 0.8603,
+      "suburban": 0.977,
+      "urban": 0.9939
+    }
+  },
+  "fleet": {
+    "buses": 100,
+    "total_base_seats": 5766,
+    "mean_utilization": 0.8342,
+    "max_utilization": 1.0,
+    "buses_over_95pct_baseline": 23,
+    "buses_over_historical_min_capacity": 0,
+    "capacity_changes": 15,
+    "accessible_buses": 81,
+    "wheelchair_positions": 216,
+    "wheelchair_students": 78,
+    "wheelchair_students_assigned": 75
+  },
+  "routes": {
+    "routes": 100,
+    "mean_stops": 6.0,
+    "mean_duration_min": 22.7,
+    "max_duration_min": 41,
+    "disruptions": 298,
+    "cancelled": 55,
+    "delayed_not_cancelled": 243
+  },
+  "attendance": {
+    "events": 927001,
+    "school_days": 200,
+    "mean_daily_attendance_records": 4635.0,
+    "mean_daily_present_riders": 4387.7,
+    "present_rate": 0.94665,
+    "status_share": {
+      "present": 0.94665,
+      "absent_excused": 0.03254,
+      "absent_unexcused": 0.01394,
+      "missed_pickup": 0.00422,
+      "route_cancelled": 0.00266
+    }
+  },
+  "notifications": {
+    "total": 19296,
+    "by_reason": {
+      "unexcused_absence": 12923,
+      "pickup_missed": 3909,
+      "route_cancelled": 2464
+    },
+    "delivery_rate": 0.9763,
+    "destination_mismatch_count": 0,
+    "home_address_exposure_count": 0
+  }
+}

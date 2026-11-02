@@ -1,0 +1,9 @@
+change_id,bus_id,effective_date,old_seat_capacity,new_seat_capacity,reason
+CAP-2026-000001,BUS-000020,2026-09-11,72,66,repair
+CAP-2026-000002,BUS-000004,2026-09-18,54,48,seat_removal
+CAP-2026-000003,BUS-000013,2026-09-22,72,66,repair
+CAP-2026-000004,BUS-000004,2026-09-29,48,54,seat_restoration
+CAP-2026-000005,BUS-000013,2026-10-01,66,72,seat_restoration
+CAP-2026-000006,BUS-000010,2026-09-22,72,20,seat_removal
+CAP-2026-000007,BUS-000007,2026-09-21,54,25,seat_removal
+CAP-2026-000008,BUS-000003,2026-09-30,54,23,seat_removal

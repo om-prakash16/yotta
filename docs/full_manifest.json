@@ -1,0 +1,201 @@
+{
+  "generator_version": "1.1.0",
+  "command": "python -m busroute generate --profile full --formats csv,json,sql --out datasets/full",
+  "seed": 20261022,
+  "config": {
+    "seed": 20261022,
+    "n_students": 5000,
+    "n_buses": 100,
+    "n_stops": 300,
+    "n_school_days": 200,
+    "n_zones": 40,
+    "first_school_day": "2026-08-24",
+    "anomalies_per_type": 5,
+    "school_year": 2026
+  },
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "row_counts": {
+    "school_calendar": 200,
+    "address_zones": 40,
+    "stops": 300,
+    "buses": 100,
+    "drivers": 100,
+    "students": 5000,
+    "guardian_contacts": 6964,
+    "routes": 100,
+    "route_stops": 600,
+    "bus_capacity_changes": 20,
+    "route_disruptions": 298,
+    "assignments": 5000,
+    "assignment_events": 5156,
+    "attendance_events": 927001,
+    "notifications": 19296
+  },
+  "ground_truth_rows": 25,
+  "quality_gate": {
+    "passed": true,
+    "baseline_violations": 0,
+    "baseline_validation_method": "inferred_from_exact_post_injection_ground_truth_closure",
+    "unexplained_violations": 0,
+    "exact_ground_truth_match": true,
+    "application_fk_violations_baseline": 0,
+    "application_fk_violations_post_injection": 0,
+    "sqlite_foreign_key_check_performed": false,
+    "sqlite_foreign_key_check_violations": null
+  },
+  "source_manifest": {
+    "external_data_used": false,
+    "provenance": "100% synthetic; no external datasets, personal records, or live contact endpoints used.",
+    "fictional_contact_domains": [
+      "example.org"
+    ],
+    "fictional_phone_range": "+1-555-0100 through +1-555-0199"
+  },
+  "files": {
+    "data/address_zones.csv": {
+      "sha256": "9bcb21907c2f3a00fac2797d23a2ed2a06dbee301e7ce72ad860d9031bd2ea52",
+      "bytes": 1917
+    },
+    "data/address_zones.json": {
+      "sha256": "397fb35aae111b5591eaef7d6718349885b77a912e923704129fc14a8c72976f",
+      "bytes": 5877
+    },
+    "data/assignment_events.csv": {
+      "sha256": "ed8ad9834ec2f46d44b9eab8a449ea70f2e0fe7b3a5ff174b94bebdb24a010d7",
+      "bytes": 288762
+    },
+    "data/assignment_events.json": {
+      "sha256": "6c8b293ec67611fca8bf92aba5bd95126faad539b25b197f7b7cf189cf7dde28",
+      "bytes": 670251
+    },
+    "data/assignments.csv": {
+      "sha256": "afd12c05873d1bc451abfd29308bcc29cac30a3c573c39b988fc18c33906ddc6",
+      "bytes": 554982
+    },
+    "data/assignments.json": {
+      "sha256": "f1d57ffd429afbaaa24ec6bceba6ea9389fc3aa3ac4cd2300018d241e5d5dfa2",
+      "bytes": 1441726
+    },
+    "data/attendance_events.csv": {
+      "sha256": "6ccb5d3e7da3529dd7a189ee7e6a03d8e6435af6e96d66ba64d2ab40a5e37d5b",
+      "bytes": 91427656
+    },
+    "data/attendance_events.json": {
+      "sha256": "fd12be5a1e58f3a2167c785e3a0dd5a17ff740bc10ca701802afc85582c5a417",
+      "bytes": 212836577
+    },
+    "data/bus_capacity_changes.csv": {
+      "sha256": "2b0b4f151b5db3c7ab07e783e01f7224227570b44ef5d9c94cdb772b87b14f02",
+      "bytes": 1187
+    },
+    "data/bus_capacity_changes.json": {
+      "sha256": "06135a6569cef2d390d5c63cded3d4e683968477db7c6c5c1b49883ab024adf2",
+      "bytes": 3053
+    },
+    "data/buses.csv": {
+      "sha256": "ff2b88fe5b000810020b861941572a8ae20031905b65ddd883a2b03634dd6f15",
+      "bytes": 4849
+    },
+    "data/buses.json": {
+      "sha256": "de64a275a7c8832da25b3fad720c2f8b2cde1cbf281545cc7678107cf86e2b30",
+      "bytes": 16952
+    },
+    "data/drivers.csv": {
+      "sha256": "b43fb2aa6ab8c84296c35312ae4c1ed3662cbdebc96dea72eeb2b23cb7a9af42",
+      "bytes": 5188
+    },
+    "data/drivers.json": {
+      "sha256": "7c8b676eabb71b6463847167284c9480d2365b226b42af6b05ecc17ba3bdb1f9",
+      "bytes": 13032
+    },
+    "data/guardian_contacts.csv": {
+      "sha256": "55588ead6fa39539d51dffd2e5c39df235323e20de1d2946bf1f788e092d1bbd",
+      "bytes": 592289
+    },
+    "data/guardian_contacts.json": {
+      "sha256": "7a809f935d40f3269afb405a2793661c89b595bebb3c7b343c5192ef9d68e876",
+      "bytes": 1457256
+    },
+    "data/notifications.csv": {
+      "sha256": "029d3e7d8548a11dd4fbf6e08d7b9404d170b8dd015acc10cdc64c70780029d2",
+      "bytes": 4019262
+    },
+    "data/notifications.json": {
+      "sha256": "a461517a22ca46628fd9e4c96978dce71d746400a0daed9c6999f33a72d76bcf",
+      "bytes": 7241570
+    },
+    "data/route_disruptions.csv": {
+      "sha256": "712b739b13faabe215e7ab6ea925f3bf6e2e1f18a7a56a8d0a1a5a85ba046d97",
+      "bytes": 17779
+    },
+    "data/route_disruptions.json": {
+      "sha256": "554b15105a96b2d013d124549afa9d1241734a407860b334c9097c58240afecc",
+      "bytes": 46314
+    },
+    "data/route_stops.csv": {
+      "sha256": "84f813a7058c16be7b5b2dc9f6f1aa4f0da6bf3d88c71342020e90cd5d8a24fb",
+      "bytes": 26614
+    },
+    "data/route_stops.json": {
+      "sha256": "dc8284f6d75b3fe33eebeebb43b6ff7d36c869f6e6b5dc0fb3abab852b0d1fb5",
+      "bytes": 101510
+    },
+    "data/routes.csv": {
+      "sha256": "588bc7154db5c890bfa8913261eb18a2ddb93054108c0c6a28bc9c585629e56f",
+      "bytes": 7969
+    },
+    "data/routes.json": {
+      "sha256": "a825d799144dee63e3ae24a372ab9d755b85933b47b4f7d0627a90ae2dcc378d",
+      "bytes": 18993
+    },
+    "data/school_calendar.csv": {
+      "sha256": "834a19b01fba15f21ac6a1220ce6a15096369ffef0dd872933d6fd18aae72354",
+      "bytes": 2914
+    },
+    "data/school_calendar.json": {
+      "sha256": "10a82bd8a027e4c960ea26d2d6c8a7f306dce8c9dbec79bfe9fd4e772112dbd9",
+      "bytes": 8893
+    },
+    "data/seed.sql": {
+      "sha256": "b73fe2ba8386b85e4e5c7ab3f6e24be7e0dc7e322da75794b88890d4faa07b6d",
+      "bytes": 125251212
+    },
+    "data/stops.csv": {
+      "sha256": "5f5efdeb53e432b1517cb26de50adabff9ce8f3850a1e6f6a6feb94289bb3c88",
+      "bytes": 21988
+    },
+    "data/stops.json": {
+      "sha256": "6c5f191948169adf65c4a0ae6c3d3ae2512b34a9aaff52a529038f5b6e9728e2",
+      "bytes": 63879
+    },
+    "data/students.csv": {
+      "sha256": "6aa680640afe391182f4edaf3b3f93d23b774e721b26430c938775a9ec3cfacf",
+      "bytes": 484310
+    },
+    "data/students.json": {
+      "sha256": "53c0688b01312f681a902c3149f342d0a98b06dd12c25e8cee3545accd6f8eb1",
+      "bytes": 1598824
+    },
+    "ground_truth/ground_truth.csv": {
+      "sha256": "b3498e43f1ac0b7f344b795ce0171d110e72eb98cfc28d66767911812fcaacf8",
+      "bytes": 6100
+    },
+    "ground_truth/ground_truth.json": {
+      "sha256": "0fa03226d4bd0194c9c3c3288a05aeef81d4126c3f3abae353e8f01932695a20",
+      "bytes": 11078
+    },
+    "metrics.json": {
+      "sha256": "db2006d2186a64e8b2a7a76d0679a588c866026a5c8e636dea310ccc65ce5e60",
+      "bytes": 2393
+    },
+    "validation_summary.json": {
+      "sha256": "ef1f46c28a9e799f7d2f579419c725de7baf927c22c2e562e038a4f95e5bd83f",
+      "bytes": 2591
+    }
+  },
+  "elapsed_s": 15.9
+}

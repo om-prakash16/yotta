@@ -1,0 +1,151 @@
+{
+  "baseline_validation": {
+    "total_violations": 0,
+    "by_check": {}
+  },
+  "post_injection_validation": {
+    "total_violations": 18,
+    "by_check": {
+      "rule.accessibility_incompatible": 3,
+      "rule.address_exposed": 3,
+      "rule.bus_capacity_exceeded": 3,
+      "rule.impossible_travel": 3,
+      "rule.notification_destination_format": 3,
+      "rule.notification_matches_guardian": 3
+    }
+  },
+  "ground_truth_scoring": {
+    "per_issue_type": {
+      "bus_capacity_exceeded": {
+        "injected": 3,
+        "detected": 3,
+        "true_positive": 3,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "impossible_travel_time": {
+        "injected": 3,
+        "detected": 3,
+        "true_positive": 3,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "incompatible_route_assignment": {
+        "injected": 3,
+        "detected": 3,
+        "true_positive": 3,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "notification_invalid_contact": {
+        "injected": 3,
+        "detected": 3,
+        "true_positive": 3,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "unapproved_address_exposed": {
+        "injected": 3,
+        "detected": 3,
+        "true_positive": 3,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    },
+    "unexplained_violations": 0,
+    "exact_match": true
+  },
+  "ground_truth_rows": 15,
+  "csv_roundtrip": {
+    "performed": true,
+    "validation": {
+      "total_violations": 18,
+      "by_check": {
+        "rule.accessibility_incompatible": 3,
+        "rule.address_exposed": 3,
+        "rule.bus_capacity_exceeded": 3,
+        "rule.impossible_travel": 3,
+        "rule.notification_destination_format": 3,
+        "rule.notification_matches_guardian": 3
+      }
+    },
+    "ground_truth_scoring": {
+      "per_issue_type": {
+        "bus_capacity_exceeded": {
+          "injected": 3,
+          "detected": 3,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "impossible_travel_time": {
+          "injected": 3,
+          "detected": 3,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "incompatible_route_assignment": {
+          "injected": 3,
+          "detected": 3,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "notification_invalid_contact": {
+          "injected": 3,
+          "detected": 3,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "unapproved_address_exposed": {
+          "injected": 3,
+          "detected": 3,
+          "true_positive": 3,
+          "false_positive": 0,
+          "false_negative": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "unexplained_violations": 0,
+      "exact_match": true
+    }
+  },
+  "foreign_key_validation": {
+    "method": "sqlite_and_application",
+    "application_validator_baseline_violations": 0,
+    "application_validator_post_injection_violations": 0,
+    "sqlite_check_performed": true,
+    "sqlite_check_violations": 0
+  },
+  "checks_run": [
+    "primary-key uniqueness",
+    "foreign-key integrity",
+    "allowed enums/regex/ranges",
+    "date ordering",
+    "arithmetic reconciliation (offsets, distances, pickup times, capacity chain)",
+    "lifecycle transitions",
+    "duplicate checks",
+    "business rules (capacity, accessibility, window, walking distance, travel speed, contact/address safety)"
+  ]
+}

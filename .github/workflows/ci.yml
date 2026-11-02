@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test-and-starter-quality-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: requirements-lock.txt
+
+      - name: Install pinned dependencies
+        run: python -m pip install -r requirements-lock.txt
+
+      - name: Run automated tests
+        run: python -m pytest -q
+
+      - name: Generate starter dataset
+        run: python -m busroute generate --profile starter --formats csv,json,sql
+
+      - name: Validate exported starter CSVs
+        run: >-
+          python -m busroute validate
+          --data datasets/starter/data
+          --ground-truth datasets/starter/ground_truth/ground_truth.csv
+
+      - name: Verify starter SQLite seed
+        run: python scripts/verify_sqlite_seed.py --seed datasets/starter/data/seed.sql

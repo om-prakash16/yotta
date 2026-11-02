@@ -1,0 +1,167 @@
+[
+  {
+    "issue_id":"GT-000001",
+    "issue_type":"incompatible_route_assignment",
+    "entity_type":"assignments",
+    "entity_id":"ASN-STU-000201-2026",
+    "affected_field":"assignments.route_id",
+    "baseline_value":"ROUTE-2026-000001",
+    "injected_value":"ROUTE-2026-000003",
+    "expected_decision":"reject: wheelchair student must ride an accessible bus",
+    "rule_ref":"needs_wheelchair => bus.wheelchair_positions>0 and stop accessible"
+  },
+  {
+    "issue_id":"GT-000002",
+    "issue_type":"incompatible_route_assignment",
+    "entity_type":"assignments",
+    "entity_id":"ASN-STU-000234-2026",
+    "affected_field":"students.needs_wheelchair",
+    "baseline_value":"0",
+    "injected_value":"1 (recorded after assignment)",
+    "expected_decision":"re-run assignment: student now requires an accessible bus",
+    "rule_ref":"needs_wheelchair => bus.wheelchair_positions>0 and stop accessible"
+  },
+  {
+    "issue_id":"GT-000003",
+    "issue_type":"incompatible_route_assignment",
+    "entity_type":"assignments",
+    "entity_id":"ASN-STU-000469-2026",
+    "affected_field":"students.needs_wheelchair",
+    "baseline_value":"0",
+    "injected_value":"1 (recorded after assignment)",
+    "expected_decision":"re-run assignment: student now requires an accessible bus",
+    "rule_ref":"needs_wheelchair => bus.wheelchair_positions>0 and stop accessible"
+  },
+  {
+    "issue_id":"GT-000004",
+    "issue_type":"bus_capacity_exceeded",
+    "entity_type":"buses",
+    "entity_id":"BUS-000010",
+    "affected_field":"bus_capacity_changes.new_seat_capacity",
+    "baseline_value":"riders=22",
+    "injected_value":"CAP-2026-000006: capacity 20",
+    "expected_decision":"flag bus over capacity; re-assign excess riders before the effective date",
+    "rule_ref":"assignments.riders <= min(capacity history)"
+  },
+  {
+    "issue_id":"GT-000005",
+    "issue_type":"bus_capacity_exceeded",
+    "entity_type":"buses",
+    "entity_id":"BUS-000007",
+    "affected_field":"bus_capacity_changes.new_seat_capacity",
+    "baseline_value":"riders=27",
+    "injected_value":"CAP-2026-000007: capacity 25",
+    "expected_decision":"flag bus over capacity; re-assign excess riders before the effective date",
+    "rule_ref":"assignments.riders <= min(capacity history)"
+  },
+  {
+    "issue_id":"GT-000006",
+    "issue_type":"bus_capacity_exceeded",
+    "entity_type":"buses",
+    "entity_id":"BUS-000003",
+    "affected_field":"bus_capacity_changes.new_seat_capacity",
+    "baseline_value":"riders=25",
+    "injected_value":"CAP-2026-000008: capacity 23",
+    "expected_decision":"flag bus over capacity; re-assign excess riders before the effective date",
+    "rule_ref":"assignments.riders <= min(capacity history)"
+  },
+  {
+    "issue_id":"GT-000007",
+    "issue_type":"impossible_travel_time",
+    "entity_type":"route_stops",
+    "entity_id":"ROUTE-2026-000011|5",
+    "affected_field":"route_stops.travel_min_from_prev",
+    "baseline_value":"4 min for 2.517 km",
+    "injected_value":"1 min for 2.517 km",
+    "expected_decision":"reject route: implied speed exceeds 80 km\/h; re-plan segment",
+    "rule_ref":"distance\/travel_time <= 80 km\/h"
+  },
+  {
+    "issue_id":"GT-000008",
+    "issue_type":"impossible_travel_time",
+    "entity_type":"route_stops",
+    "entity_id":"ROUTE-2026-000020|2",
+    "affected_field":"route_stops.travel_min_from_prev",
+    "baseline_value":"8 min for 3.764 km",
+    "injected_value":"1 min for 3.764 km",
+    "expected_decision":"reject route: implied speed exceeds 80 km\/h; re-plan segment",
+    "rule_ref":"distance\/travel_time <= 80 km\/h"
+  },
+  {
+    "issue_id":"GT-000009",
+    "issue_type":"impossible_travel_time",
+    "entity_type":"route_stops",
+    "entity_id":"ROUTE-2026-000004|6",
+    "affected_field":"route_stops.travel_min_from_prev",
+    "baseline_value":"8 min for 3.313 km",
+    "injected_value":"1 min for 3.313 km",
+    "expected_decision":"reject route: implied speed exceeds 80 km\/h; re-plan segment",
+    "rule_ref":"distance\/travel_time <= 80 km\/h"
+  },
+  {
+    "issue_id":"GT-000010",
+    "issue_type":"notification_invalid_contact",
+    "entity_type":"notifications",
+    "entity_id":"NOT-2026-000185",
+    "affected_field":"notifications.destination",
+    "baseline_value":"not-a-phone",
+    "injected_value":"not-a-phone",
+    "expected_decision":"block send; route to school office for manual contact",
+    "rule_ref":"destination must match guardian contact on file and format"
+  },
+  {
+    "issue_id":"GT-000011",
+    "issue_type":"notification_invalid_contact",
+    "entity_type":"notifications",
+    "entity_id":"NOT-2026-000088",
+    "affected_field":"notifications.destination",
+    "baseline_value":"+1-555-01",
+    "injected_value":"+1-555-01",
+    "expected_decision":"block send; route to school office for manual contact",
+    "rule_ref":"destination must match guardian contact on file and format"
+  },
+  {
+    "issue_id":"GT-000012",
+    "issue_type":"notification_invalid_contact",
+    "entity_type":"notifications",
+    "entity_id":"NOT-2026-000013",
+    "affected_field":"notifications.destination",
+    "baseline_value":"not-a-phone",
+    "injected_value":"not-a-phone",
+    "expected_decision":"block send; route to school office for manual contact",
+    "rule_ref":"destination must match guardian contact on file and format"
+  },
+  {
+    "issue_id":"GT-000013",
+    "issue_type":"unapproved_address_exposed",
+    "entity_type":"notifications",
+    "entity_id":"NOT-2026-000097",
+    "affected_field":"notifications.message_text",
+    "baseline_value":"no address",
+    "injected_value":"contains '8378 Orchard Ave'",
+    "expected_decision":"redact: notifications may reference only student id and approved stop",
+    "rule_ref":"no home address in outbound messages"
+  },
+  {
+    "issue_id":"GT-000014",
+    "issue_type":"unapproved_address_exposed",
+    "entity_type":"notifications",
+    "entity_id":"NOT-2026-000171",
+    "affected_field":"notifications.message_text",
+    "baseline_value":"no address",
+    "injected_value":"contains '5498 Oak Ln'",
+    "expected_decision":"redact: notifications may reference only student id and approved stop",
+    "rule_ref":"no home address in outbound messages"
+  },
+  {
+    "issue_id":"GT-000015",
+    "issue_type":"unapproved_address_exposed",
+    "entity_type":"notifications",
+    "entity_id":"NOT-2026-000164",
+    "affected_field":"notifications.message_text",
+    "baseline_value":"no address",
+    "injected_value":"contains '5049 Maple Ave'",
+    "expected_decision":"redact: notifications may reference only student id and approved stop",
+    "rule_ref":"no home address in outbound messages"
+  }
+]

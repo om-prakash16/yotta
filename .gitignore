@@ -1,0 +1,17 @@
+*.pyc
+.pytest_cache/
+.venv/
+__pycache__/
+archive/
+output/
+*.zip
+*.sha256
+datasets/full/
+datasets/full_repro/
+datasets/starter_repro/
+docs/full_repro/
+docs/starter_repro/
+
+datasets/full_*/
+
+

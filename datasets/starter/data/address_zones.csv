@@ -1,0 +1,13 @@
+zone_id,zone_name,zone_type,centroid_x_km,centroid_y_km,is_approved_service_area
+ZONE-000001,District 01,suburban,-0.308,2.004,1
+ZONE-000002,District 02,urban,-0.012,-0.25,1
+ZONE-000003,District 03,suburban,2.171,-0.131,1
+ZONE-000004,District 04,suburban,-1.912,-1.957,1
+ZONE-000005,District 05,suburban,-1.564,1.288,1
+ZONE-000006,District 06,suburban,2.547,-1.214,1
+ZONE-000007,District 07,rural,3.906,2.495,1
+ZONE-000008,District 08,rural,2.385,2.742,1
+ZONE-000009,District 09,suburban,2.121,0.126,1
+ZONE-000010,District 10,suburban,2.138,-2.345,1
+ZONE-000011,District 11,rural,0.591,-4.713,1
+ZONE-000012,District 12,urban,-1.102,-0.815,0
